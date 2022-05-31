@@ -1,0 +1,12 @@
+[Unit]
+Description=Botpress service.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/botpress.sh
+Environment=APP_DATA_PATH=/home/[USER]
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
